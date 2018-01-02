@@ -21,7 +21,8 @@
     "storybook:build": "cd stories && npm install && cd .. && build-storybook -c stories",
     "setup": "npm install && npm run storybook:build -s && npm run validate",
     "validate": "kcd-scripts validate lint,build-and-test,test:cover,test:ts,test:ssr",
-    "precommit": "kcd-scripts precommit"
+    "precommit": "kcd-scripts precommit",
+    "cy:open": "cypress open"
   },
   "files": [
     "dist",
@@ -50,7 +51,10 @@
     "react": ">=15"
   },
   "devDependencies": {
+    "@cypress/webpack-preprocessor": "^1.1.2",
     "@storybook/react": "^3.2.16",
+    "cypress": "^1.4.1",
+    "cypress-react-unit-test": "^1.0.0",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "enzyme-to-json": "^3.2.2",
